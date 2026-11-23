@@ -1,0 +1,58 @@
+{
+  "name": "@arpankaur/pageflow",
+  "version": "0.1.0",
+  "description": "A reusable pagination, filtering, sorting and search engine for Node.js APIs.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.js --format esm,cjs --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "keywords": [
+    "pagination",
+    "mongodb",
+    "mongoose",
+    "filtering",
+    "sorting",
+    "search",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/pageflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/pageflow/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/pageflow#readme",
+  "peerDependencies": {
+    "mongoose": ">=7"
+  },
+  "devDependencies": {
+    "mongoose": "^8.24.10",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}
